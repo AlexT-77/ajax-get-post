@@ -1,8 +1,1 @@
-[21-Feb-2025 10:13:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'conn.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/alextalamonti.it/public_html/98_finale/sign.php:13
-Stack trace:
-#0 {main}
-  thrown in /home/customer/www/alextalamonti.it/public_html/98_finale/sign.php on line 13
-[21-Feb-2025 10:14:00 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'conn.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/alextalamonti.it/public_html/98_finale/sign.php:13
-Stack trace:
-#0 {main}
-  thrown in /home/customer/www/alextalamonti.it/public_html/98_finale/sign.php on line 13
+
