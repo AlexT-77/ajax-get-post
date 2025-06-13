@@ -9,9 +9,9 @@ if ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.
 } else {
     // connetterci al DB (tramite PDO)
     $host = "localhost";
-    $dbname = "dbbdyh1lrytgik";
-    $username = "u0qv5kpazzj9q";
-    $password = "Amerini16!";
+    $dbname = "";
+    $username = "";
+    $password = "";
 
     try {
         $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
