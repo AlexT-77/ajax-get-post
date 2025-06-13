@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>Come Migliorare il Tuo Umore - Consigli e Strategie per la Felicità</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Scopri consigli e strategie per migliorare il tuo umore istantaneamente. Trova la felicità e la positività con le nostre guide ed esercizi.">
+    <meta name="keywords"
+        content="Migliorare l'umore, Felicità istantanea, Positività quotidiana, Consigli per il benessere, Tecniche di miglioramento dell'umore, Strategie per la gioia, Benessere mentale, Felicità personale, Crescita emotiva, Auto-miglioramento">
+    <meta name="author" content="Fenice Academy 300H">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awsome -->
+    <script src="https://kit.fontawesome.com/baabfba40a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Start Coming -->
+    <section class="coming" id="main-content">
+        <div class="container">
+            <div class="coming-holder">
+                <div class="coming-text">
+                    <a href="index.html" class="header-logo no-link"><i class="fa fas fa-arrow-circle-left" id="back"></i></a>
+                    <a href="logout.html" class="header-profile no-link"><i class="fa fas fas fa-sign-out-alt" id="logout"></i></a>
+                    <h2>Frasi preferite</h2>
+                    <div id="all_phrases">
+                        <!-- qui dentro ci mettiamo tutte le frasi a cui abbiamo messo like -->
+                        
+                    </div>
+                    <p class="favorite-phrase" id="to_duplicate_p"></p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div style="position: relative; width: 100%; height: 400px;">
+        <canvas id="moodChart"></canvas>
+    </div>
+
+    <script>
+        async function fetchMoodData(userUUID) {
+            try {
+                let response = await fetch("backend/moodData.php", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ user_uuid: userUUID })
+                });
+
+                let data = await response.json();
+
+                console.log(data); // Debug: Controlla i dati ricevuti
+                return data;
+            } catch (error) {
+                console.error("Errore nel recupero dati:", error);
+            }
+        }
+
+        // Chiamata alla funzione con il tuo UUID utente
+        let userUUID = localStorage.getItem("uuid_user"); // Modifica con il valore dinamico
+        fetchMoodData(userUUID).then(data => {
+            if (data) {
+                generateChart(data);
+            }
+        });
+
+    </script>
+
+    <!--Load JavaScript-->
+    <script src="js/jquery.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/generateChart.js"></script>
+
+</body>
+
+</html>

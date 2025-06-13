@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>Come Migliorare il Tuo Umore - Consigli e Strategie per la Felicità</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Scopri consigli e strategie per migliorare il tuo umore istantaneamente. Trova la felicità e la positività con le nostre guide ed esercizi.">
+    <meta name="keywords"
+        content="Migliorare l'umore, Felicità istantanea, Positività quotidiana, Consigli per il benessere, Tecniche di miglioramento dell'umore, Strategie per la gioia, Benessere mentale, Felicità personale, Crescita emotiva, Auto-miglioramento">
+    <meta name="author" content="Fenice Academy 300H">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awsome -->
+    <script src="https://kit.fontawesome.com/baabfba40a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Start Coming -->
+    <section class="coming" id="main-content">
+        <div class="container">
+            <div class="coming-holder">
+                <div class="coming-text">
+                    <img src="images/logo.png" class="header-logo" alt="Logo" id="logo">
+                    <img src="images/profile.png" id="profile_img" class="header-profile" alt="Logo">
+                    <h1 id="main_phrase">
+                        
+                    </h1>
+
+                </div>
+            </div>
+            <div class="static-footer">
+                <a id="btn_share"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
+                <a id="btn_like"><i class="fa far fa-heart"></i></a>
+                <a id="btn_reload"><i class="fa-solid fa-rotate"></i></a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- modale -->
+    <div id="modale-div" class="modale-background hidden">
+        <div class="modale-custom">
+            <form class="modale-form" method="post" action="sign.php">
+                <h2>Accedi o iscriviti</h2>
+                <div class="mb-3">
+                    <input type="email" class="form-control" name="email_login" placeholder="abc@mail.com" required>
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control" name="password_login" placeholder="*******" required>
+                </div>
+                <button class="modale-submit" type="submit">
+                    Accedi
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modale per la valutazione -->
+    <div id="rating-modal" class="modale-valutazione hidden">
+        <div class="modale-custom">
+            <h2>Come ti senti oggi?</h2>
+            <form id="rating-form">
+                <div class="rating-options">
+                    <label><input type="radio" name="rating" value="1"> 1</label>
+                    <label><input type="radio" name="rating" value="2"> 2</label>
+                    <label><input type="radio" name="rating" value="3"> 3</label>
+                    <label><input type="radio" name="rating" value="4"> 4</label>
+                    <label><input type="radio" name="rating" value="5"> 5</label>
+                </div>
+                <button type="submit" class="modale-submit">Invia</button>
+                <button id="close-modal" class="modale-close">Chiudi</button>
+            </form>
+        </div>
+    </div>
+
+    <!--Load JavaScript-->
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
