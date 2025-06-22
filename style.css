@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  padding-inline: 5px;
+  cursor: pointer;
+}
+
+li {
+  list-style-position: inside;
+  list-style-type: none;
+  margin: 10px 20px;
+}
+
+h1{
+  margin: 2% auto;
+}
+
+.container {
+  font-size: 20px;
+  width: 100vw;
+  max-width: 600px;
+  margin-inline: auto;
+  text-align: center;
+
+  border: 1px solid black;
+  background-color: aqua;
+}
+
+.new-todo-container {
+  display: flex;
+  gap: 5px;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.new-todo-container>input {
+  font-size: 20px;
+  padding: 5px;
+  width: 100%;
+}
+
+#todos-section {
+  margin-top: 20px;
+  border-top: 1px solid gray;
+}
+
+.todo {
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  transition: box-shadow 200ms;
+}
+
+.todo:hover {
+  box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+.todo label {
+  margin-left: 10px;
+}
+
+.todo input:checked+label {
+  text-decoration: line-through;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.todo-item-enter {
+  animation: slideInRight 0.4s ease-out;
+}
+
+.danger {
+  background-color: rgb(177, 31, 91);
+  color: white;
+}
+
+.warning {
+  background-color: rgb(212, 195, 38);
+  color: white;
+}
+
+.normal {
+  background-color: #35cb08;
+  color: white;
+}
+
+.wrapperButtons {
+  display: flex;
+  gap: 10px;
+}
+
+dialog[open] {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 1em 1em;
+  border-radius: 8px;
+  text-align: center;
+  background: #c9c8c8;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+dialog button {
+  width: fit-content;
+  margin: 0 auto;
+  color: cyan;
+  background-color: slategray;
+}
+
+#closeBtnModal {
+  padding: 0;
+  margin: 0;
+  height: 12px;
+  font-size: x-small;
+  position: relative;
+  margin-top: -5%;
+  margin-left: -5%;
+}
